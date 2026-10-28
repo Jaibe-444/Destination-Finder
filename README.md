@@ -52,7 +52,7 @@ destinationfinder/
 
 ```
 ### Wire Frame
-
+```
 ** DESKTOP **
 +---------------------------------------------------------------------------------------------+
 | [Icon] DestinationFinder          [Home]   [Explore]   [Packages]   [Contact]               |  <-- Sticky Navbar
@@ -174,4 +174,3 @@ destinationfinder/
 | London, NW1 6XE           |
 | © 2026 DestinationFinder  |
 +---------------------------+
-```

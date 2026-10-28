@@ -37,6 +37,58 @@ Encourage user engagement and monetize through affiliate link clicks, travel pac
 - **Google Fonts:** *Montserrat* (Headings) and *Open Sans* (Body text).
 - **Bootstrap Icons:** Clean iconography.
 
+- ## 💡 Technical Explanation & Techniques Used
+
+### A. HTML Structure Block-by-Block
+
+1. **Meta & Fonts (`<head>`)**
+   - **Technique:** Google Fonts (`Montserrat` for titles, `Open Sans` for standard text) + Bootstrap CDN.
+   - **Why:** Using Google Fonts makes the project look professionally designed (academic criteria for presentation), while Bootstrap 5 gives us responsive grids right out of the box without writing hundreds of custom CSS lines.
+
+2. **Navigation Bar (`<nav>`)**
+   - **Technique:** Bootstrap `navbar-expand-lg`, `navbar-dark`, and `sticky-top`.
+   - **Why:** `sticky-top` keeps the header menu anchored at the top of the browser screen while scrolling. The standard toggle hamburger menu opens on mobile devices.
+
+3. **Hero Header & Search Form (`<header>`)**
+   - **Technique:** Centered overlay card over a full-width background photo with dark linear-gradient contrast.
+   - **Why:** This creates an immediate visual hook. Placing input fields (`destination-input`, `category-select`) inside a white elevated box gives users a clear starting point for searching.
+
+4. **Main Exploration Section (`<main id="explore">`)**
+   - **Technique:** Bootstrap 12-column grid (`col-lg-5` for the search results, `col-lg-7` for the map).
+   - **Why:** On desktop screens, side-by-side positioning lets users see results and map side-by-side. On mobile/tablet screens, Bootstrap automatically stacks `col-lg-5` on top of `col-lg-7` for a clean mobile scroll layout.
+
+5. **Map Placeholder (`<div id="map">`)**
+   - **Technique:** Empty container with specific height CSS (`min-height: 450px`).
+   - **Why:** Google Maps API requires an existing DOM `div` with explicit height dimensions to render markers into. Preparing this element now ensures zero markup changes are required when we add JavaScript in Step 2.
+
+6. **Sponsored Packages Section (`<section id="packages">`)**
+   - **Technique:** 3-column Bootstrap grid (`col-md-4`) with card components.
+   - **Why:** Directly addresses the site owner's goal (monetization via package promotions) required in your assignment brief.
+
+7. **Footer (`<footer>`)**
+   - **Technique:** Dark contrast footer with semantic columns and contact information.
+   - **Why:** Holds the London placeholder address (`124 Baker Street, Marylebone, London, NW1 6XE`) required for the assignment.
+
+---
+
+### B. CSS Techniques Block-by-Block
+
+1. **Typography Separation (`font-family`)**
+   - **Technique:** Applying `Montserrat` to `h1`-`h6` and `Open Sans` to body.
+   - **Why:** Creating font contrast between headings and body text improves readability and visual hierarchy.
+
+2. **Dark Gradient Overlay (`background: linear-gradient(...)`)**
+   - **Technique:** Semi-transparent dark gradient overlaid on top of an Unsplash travel image background.
+   - **Why:** Pure background images often make white text unreadable. Overlaying a semi-transparent dark gradient guarantees that white hero text is high contrast and legible.
+
+3. **Scrollable Results Area (`max-height` + `overflow-y: auto`)**
+   - **Technique:** Setting fixed height with vertical scrolling on `.results-container`.
+   - **Why:** If a search returns 20 places, we do not want the entire web page to stretch endlessly down. Locking the results container height keeps the interactive map pinned next to the results.
+
+4. **Micro-Interactions (`.card:hover`)**
+   - **Technique:** `transform: translateY(-3px);` combined with CSS transitions.
+   - **Why:** Subtle lift-on-hover animations give interactive feedback when users hover over package deals.
+
 ---
 
 ## 📁 Project File Structure
@@ -50,10 +102,12 @@ destinationfinder/
     └── css/
         └── style.css       # Custom CSS styling & overrides
 
+
 ```
 ### Wire Frame
 ```
 ** 1. Desktop Wireframe Layout (≥ 992px) **
+
 +---------------------------------------------------------------------------------------------+
 | [Icon] DestinationFinder          [Home]   [Explore]   [Packages]   [Contact]               |  <-- Sticky Navbar
 +---------------------------------------------------------------------------------------------+
@@ -100,7 +154,9 @@ destinationfinder/
 |  © 2026 DestinationFinder. School Project Assignment.                                     |
 +---------------------------------------------------------------------------------------------+
 
+
 ** 2. Tablet Wireframe Layout (768px – 991px) **
+
 +-------------------------------------------------------+
 | [Icon] DestinationFinder                       [≡]    |
 +-------------------------------------------------------+
@@ -129,7 +185,9 @@ destinationfinder/
 | Footer: 124 Baker Street, London, NW1 6XE             |
 +-------------------------------------------------------+
 
+
 ** 3. Mobile Wireframe Layout (< 768px) **
+
 +---------------------------+
 | [Icon] DestinationFinder  |
 +---------------------------+

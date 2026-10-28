@@ -49,3 +49,129 @@ destinationfinder/
 └── assets/
     └── css/
         └── style.css       # Custom CSS styling & overrides
+
+```
+### Wire Frame
+
+** DESKTOP **
++---------------------------------------------------------------------------------------------+
+| [Icon] DestinationFinder          [Home]   [Explore]   [Packages]   [Contact]               |  <-- Sticky Navbar
++---------------------------------------------------------------------------------------------+
+|                                                                                             |
+|                     Find Your Next Holiday Destination                                      |
+|            Discover top attractions, accommodations, and dining across the globe.           |
+|                                                                                             |
+|      +-------------------------------------------------------------------------------+      |
+|      | [📍] Enter a city (e.g. London, Paris)  | [All Categories v]  | [  Search  ]    |      | <-- Hero Search Bar
+|      +-------------------------------------------------------------------------------+      |
+|                                                                                             |
++---------------------------------------------------------------------------------------------+
+|                                                                                             |
+|  LEFT COLUMN: Destinations (5 cols)           | RIGHT COLUMN: Destination Map (7 cols)      |
+|  -------------------------------------------  | -----------------------------------------   |
+|  [Destinations]           [Preview Mode]      |                                           |
+|  [All]  [Sights]  [Stays]  [Food]             |   +-----------------------------------+   |
+|                                               |   |                                   |   |
+|  +-----------------------------------------+  |   |            Google Maps            |   |
+|  | [Img] | The Sherlock Holmes Museum      |  |   |             Placeholder           |   |
+|  |       | ★ 4.6 (3,420 rev) • 221b Baker St |  |   |        (Ready for API in Step 2)  |   |
+|  |       | [View Deal]                     |  |   |                                   |   |
+|  +-----------------------------------------+  |   |                                   |   |
+|  (Scrollable container for future results)    |   +-----------------------------------+   |
+|                                               |                                           |
++---------------------------------------------------------------------------------------------+
+|                                                                                             |
+|  Featured Holiday Packages                                                                  |
+|  Curated deals from our travel partners                                                     |
+|                                                                                             |
+|  +---------------------------+  +---------------------------+  +-------------------------+  |
+|  | [Sponsored]               |  | [Featured]                |  | [Popular]               |  |
+|  | London City Weekend       |  | Paris Romantic Getaway    |  | Tokyo City Lights       |  |
+|  | 3 Nights stay + pass      |  | 4 Nights + cruise         |  | 7 Nights + rail pass    |  |
+|  | From £299 / person        |  | From £450 / person        |  | From £899 / person      |  |
+|  | [ Book Package ]          |  | [ Book Package ]          |  | [ Book Package ]        |  |
+|  +---------------------------+  +---------------------------+  +-------------------------+  |
+|                                                                                             |
++---------------------------------------------------------------------------------------------+
+|  DestinationFinder                                 Head Office Address:                     |
+|  An interactive holiday planning platform          124 Baker Street, Marylebone             |
+|  built with Bootstrap & Google Maps API.           London, NW1 6XE, United Kingdom          |
+|---------------------------------------------------------------------------------------------|
+|  © 2026 DestinationFinder. School Project Assignment.                                     |
++---------------------------------------------------------------------------------------------+
+
+** TABLET **
++-------------------------------------------------------+
+| [Icon] DestinationFinder                       [≡]    |
++-------------------------------------------------------+
+| Find Your Next Holiday Destination                    |
+| [ Enter city...            ] [ All Cat ] [ Search ]   |
++-------------------------------------------------------+
+| Destinations (Scrollable List)                        |
+| +---------------------------------------------------+ |
+| | [Img] The Sherlock Holmes Museum                  | |
+| |       ★ 4.6 • 221b Baker St | [View Deal]         | |
+| +---------------------------------------------------+ |
++-------------------------------------------------------+
+| Destination Map Container                             |
+| +---------------------------------------------------+ |
+| |                                                   | |
+| |              Interactive Map Placeholder          | |
+| |                                                   | |
+| +---------------------------------------------------+ |
++-------------------------------------------------------+
+| Featured Holiday Packages (2 columns stacked)         |
+| +-------------------------+ +-------------------------+ |
+| | London City Weekend     | | Paris Getaway           | |
+| | From £299 / person      | | From £450 / person      | |
+| +-------------------------+ +-------------------------+ |
++-------------------------------------------------------+
+| Footer: 124 Baker Street, London, NW1 6XE             |
++-------------------------------------------------------+
+
+** MOBILE **
++---------------------------+
+| [Icon] DestinationFinder  |
++---------------------------+
+| Find Your Next Holiday    |
+| Destination               |
+|                           |
+| [ Enter city...         ] |
+| [ All Categories v      ] |
+| [ Search Button         ] |
++---------------------------+
+| Destinations              |
+| [All][Sights][Stays][Food]|
+|                           |
+| +-----------------------+ |
+| | [Img] Sherlock Holmes | |
+| |       Museum          | |
+| |       ★ 4.6           | |
+| |       [View Deal]     | |
+| +-----------------------+ |
++---------------------------+
+| Destination Map           |
+| +-----------------------+ |
+| |                       | |
+| |   Map Container       | |
+| |                       | |
+| +-----------------------+ |
++---------------------------+
+| Featured Packages         |
+| +-----------------------+ |
+| | London City Weekend   | |
+| | From £299 / person    | |
+| | [ Book Package ]      | |
+| +-----------------------+ |
+| +-----------------------+ |
+| | Paris Getaway         | |
+| | From £450 / person    | |
+| | [ Book Package ]      | |
+| +-----------------------+ |
++---------------------------+
+| Head Office:              |
+| 124 Baker Street          |
+| London, NW1 6XE           |
+| © 2026 DestinationFinder  |
++---------------------------+
+```

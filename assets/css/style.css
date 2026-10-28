@@ -1,0 +1,17 @@
+/* Custom Styles for DestinationFinder */
+
+/* 1. Global Typography & Colors */
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #333333;
+    background-color: #f8f9fa;
+}
+
+h1, h2, h3, h4, h5, h6, .navbar-brand {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* 2. Helper Utility Classes */
+.max-w-700 {
+    max-width: 700px;
+}

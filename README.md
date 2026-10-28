@@ -19,14 +19,14 @@ Encourage user engagement and monetize through affiliate link clicks, travel pac
 ## 👤 User Stories & Progress
 
 ### Completed (Phase 1: Foundation & Layout)
-- **[US-04] Responsive Foundation & Wireframing:** As a developer, I want a clean HTML5 and CSS3 layout built with Bootstrap 5 and Google Fonts so the site scales smoothly across mobile, tablet, and desktop.
-- **[US-07] Project Documentation & Structure:** As a student, I want a professional file structure, `.gitignore`, and detailed README for school project submission.
+- ** Responsive Foundation & Wireframing:** As a developer, I want a clean HTML5 and CSS3 layout built with Bootstrap 5 and Google Fonts so the site scales smoothly across mobile, tablet, and desktop.
+- ** Project Documentation & Structure:** As a student, I want a professional file structure, `.gitignore`, and detailed README for school project submission.
 
 ### Upcoming (Phase 2: Functionality & APIs)
-- **[US-01] City Search Logic:** As a user, I want to search for a city to filter destinations.
-- **[US-02] Category Filtering:** As a traveler, I want to filter results by Attractions, Stays, and Food.
-- **[US-03] Google Maps & Places API Integration:** As a user, I want an interactive map displaying location pins based on my search.
-- **[US-05] Sponsored Travel Packages:** As the site owner, I want promotional package cards clearly displayed for conversion tracking.
+- ** City Search Logic:** As a user, I want to search for a city to filter destinations.
+- ** Category Filtering:** As a traveler, I want to filter results by Attractions, Stays, and Food.
+- ** Google Maps & Places API Integration:** As a user, I want an interactive map displaying location pins based on my search.
+- ** Sponsored Travel Packages:** As the site owner, I want promotional package cards clearly displayed for conversion tracking.
 
 ---
 

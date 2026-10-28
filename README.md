@@ -53,7 +53,7 @@ destinationfinder/
 ```
 ### Wire Frame
 ```
-** DESKTOP **
+** 1. Desktop Wireframe Layout (≥ 992px) **
 +---------------------------------------------------------------------------------------------+
 | [Icon] DestinationFinder          [Home]   [Explore]   [Packages]   [Contact]               |  <-- Sticky Navbar
 +---------------------------------------------------------------------------------------------+
@@ -100,7 +100,7 @@ destinationfinder/
 |  © 2026 DestinationFinder. School Project Assignment.                                     |
 +---------------------------------------------------------------------------------------------+
 
-** TABLET **
+** 2. Tablet Wireframe Layout (768px – 991px) **
 +-------------------------------------------------------+
 | [Icon] DestinationFinder                       [≡]    |
 +-------------------------------------------------------+
@@ -129,7 +129,7 @@ destinationfinder/
 | Footer: 124 Baker Street, London, NW1 6XE             |
 +-------------------------------------------------------+
 
-** MOBILE **
+** 3. Mobile Wireframe Layout (< 768px) **
 +---------------------------+
 | [Icon] DestinationFinder  |
 +---------------------------+

@@ -45,3 +45,12 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
     min-height: 450px;
     background-color: #e9ecef;
 }
+
+/* 6. Card Hover Animations */
+.card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+}

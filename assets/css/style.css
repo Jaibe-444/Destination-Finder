@@ -23,3 +23,18 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
     padding-top: 4rem;
     padding-bottom: 4rem;
 }
+
+/* 4. Results List Scroll Area */
+.results-container {
+    max-height: 450px;
+    overflow-y: auto;
+}
+
+/* Custom scrollbar styling */
+.results-container::-webkit-scrollbar {
+    width: 6px;
+}
+.results-container::-webkit-scrollbar-thumb {
+    background-color: #ced4da;
+    border-radius: 4px;
+}

@@ -79,13 +79,13 @@
                 <span class="badge bg-secondary">Preview Mode</span>
             </div>
 
-            <!-- Filter Button Group -->
-            <div class="btn-group w-100 mb-3" role="group">
-                <button type="button" class="btn btn-outline-dark active btn-sm">All</button>
-                <button type="button" class="btn btn-outline-dark btn-sm">Sights</button>
-                <button type="button" class="btn btn-outline-dark btn-sm">Stays</button>
-                <button type="button" class="btn btn-outline-dark btn-sm">Food</button>
-            </div>
+            <!-- Filter Button Group with Data Attributes -->
+<div class="btn-group w-100 mb-3" role="group" id="filter-group">
+    <button type="button" class="btn btn-outline-dark active btn-sm filter-btn" data-category="all">All</button>
+    <button type="button" class="btn btn-outline-dark btn-sm filter-btn" data-category="attractions">Sights</button>
+    <button type="button" class="btn btn-outline-dark btn-sm filter-btn" data-category="lodging">Stays</button>
+    <button type="button" class="btn btn-outline-dark btn-sm filter-btn" data-category="restaurants">Food</button>
+</div>
 
             <!-- Results Scroll Container with Placeholder Item -->
             <div class="results-container pe-1" id="results-container">

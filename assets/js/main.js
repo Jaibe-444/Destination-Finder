@@ -32,17 +32,13 @@ const destinationsData = [
 // 2. Function to Render Destination Cards Dynamically
 function renderDestinations(items) {
     const container = document.getElementById("results-container");
-    
-    // Clear the container first so we don't duplicate items
     container.innerHTML = "";
 
-    // If no items match, show a friendly message
     if (items.length === 0) {
         container.innerHTML = `<p class="text-muted text-center py-4">No destinations found matching your criteria.</p>`;
         return;
     }
 
-    // Loop through each destination object and create HTML template strings
     items.forEach(dest => {
         const cardHTML = `
             <div class="card mb-3 shadow-sm border-0">
@@ -64,15 +60,42 @@ function renderDestinations(items) {
                 </div>
             </div>
         `;
-        // Append each card to our results container
         container.innerHTML += cardHTML;
     });
 }
 
-// 3. Run when browser finishes loading the page
+// 3. Function to Filter Destinations by Category
+function filterDestinations(category) {
+    if (category === "all") {
+        renderDestinations(destinationsData);
+    } else {
+        // .filter() creates a new array containing only items that match the category
+        const filteredItems = destinationsData.filter(dest => dest.category === category);
+        renderDestinations(filteredItems);
+    }
+}
+
+// 4. Run when browser finishes loading the page
 document.addEventListener("DOMContentLoaded", () => {
     console.log("DestinationFinder JavaScript loaded successfully!");
     
-    // Render all destinations on initial page load
+    // Initial render
     renderDestinations(destinationsData);
+
+    // Attach click event listeners to all filter buttons
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    
+    filterButtons.forEach(button => {
+        button.addEventListener("click", (e) => {
+            // Remove 'active' class from all buttons
+            filterButtons.forEach(btn => btn.classList.remove("active"));
+            
+            // Add 'active' class to the clicked button for visual feedback
+            e.target.classList.add("active");
+
+            // Extract category name and run filter function
+            const category = e.target.getAttribute("data-category");
+            filterDestinations(category);
+        });
+    });
 });

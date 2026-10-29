@@ -68,48 +68,70 @@
         </div>
     </header>
 
-    <!-- 3. Main Exploration Section (List + Map Grid) -->
-    <main class="container my-5" id="explore">
-        <div class="row g-4">
-            
-            <!-- Left Column: Search Results List -->
-            <div class="col-lg-5">
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                    <h2 class="h4 fw-bold mb-0">Destinations</h2>
-                    <span class="badge bg-secondary">Preview Mode</span>
-                </div>
+<!-- 3. Main Exploration Section (List + Map Grid) -->
+<main class="container my-5" id="explore">
+    <div class="row g-4">
+        
+        <!-- Left Column: Search Results List -->
+        <div class="col-lg-5">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h2 class="h4 fw-bold mb-0">Destinations</h2>
+                <span class="badge bg-secondary">Preview Mode</span>
+            </div>
 
-                <!-- Filter Button Group -->
-                <div class="btn-group w-100 mb-3" role="group">
-                    <button type="button" class="btn btn-outline-dark active btn-sm">All</button>
-                    <button type="button" class="btn btn-outline-dark btn-sm">Sights</button>
-                    <button type="button" class="btn btn-outline-dark btn-sm">Stays</button>
-                    <button type="button" class="btn btn-outline-dark btn-sm">Food</button>
-                </div>
+            <!-- Filter Button Group -->
+            <div class="btn-group w-100 mb-3" role="group">
+                <button type="button" class="btn btn-outline-dark active btn-sm">All</button>
+                <button type="button" class="btn btn-outline-dark btn-sm">Sights</button>
+                <button type="button" class="btn btn-outline-dark btn-sm">Stays</button>
+                <button type="button" class="btn btn-outline-dark btn-sm">Food</button>
+            </div>
 
-                <!-- Results Scroll Container with Placeholder Item -->
-                <div class="results-container pe-1">
-                    <div class="card mb-3 shadow-sm border-0">
-                        <div class="row g-0">
-                            <div class="col-4">
-                                <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=400&q=80" class="img-fluid rounded-start h-100 object-fit-cover" alt="London">
-                            </div>
-                            <div class="col-8">
-                                <div class="card-body py-2 px-3">
-                                    <h5 class="card-title fw-bold fs-6 mb-1">The Sherlock Holmes Museum</h5>
-                                    <p class="text-muted small mb-1"><i class="bi bi-geo-alt text-danger me-1"></i>221b Baker St, London</p>
-                                    <div class="mb-2">
-                                        <span class="badge bg-warning text-dark">★ 4.6</span>
-                                        <span class="text-muted small ms-1">(3,420 reviews)</span>
-                                    </div>
-                                    <a href="#packages" class="btn btn-sm btn-outline-primary py-0">View Deal</a>
+            <!-- Results Scroll Container with Placeholder Item -->
+            <div class="results-container pe-1">
+                <div class="card mb-3 shadow-sm border-0">
+                    <div class="row g-0">
+                        <div class="col-4">
+                            <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=400&q=80" class="img-fluid rounded-start h-100 object-fit-cover" alt="London">
+                        </div>
+                        <div class="col-8">
+                            <div class="card-body py-2 px-3">
+                                <h5 class="card-title fw-bold fs-6 mb-1">The Sherlock Holmes Museum</h5>
+                                <p class="text-muted small mb-1"><i class="bi bi-geo-alt text-danger me-1"></i>221b Baker St, London</p>
+                                <div class="mb-2">
+                                    <span class="badge bg-warning text-dark">★ 4.6</span>
+                                    <span class="text-muted small ms-1">(3,420 reviews)</span>
                                 </div>
+                                <a href="#packages" class="btn btn-sm btn-outline-primary py-0">View Deal</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
 
+        <!-- Right Column: Interactive Map Placeholder -->
+        <div class="col-lg-7">
+            <div class="card shadow-sm h-100">
+                <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center">
+                    <span class="fw-semibold"><i class="bi bi-map me-2"></i>Destination Map</span>
+                    <small class="text-white-50">Google Maps Integration Area</small>
+                </div>
+                <div class="card-body p-0">
+                    <!-- #map div is ready for Google Maps API later -->
+                    <div id="map" class="map-placeholder d-flex align-items-center justify-content-center text-muted">
+                        <div class="text-center">
+                            <i class="bi bi-geo-alt display-3 text-secondary mb-2"></i>
+                            <p class="mb-0 fw-semibold">Map container loaded.</p>
+                            <small class="text-muted">Google Maps API will render here in Step 2.</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</main>
             <!-- 4. Sponsored Packages Section -->
     <section class="bg-light py-5" id="packages">
         <div class="container">

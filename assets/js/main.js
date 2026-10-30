@@ -1,4 +1,4 @@
-// 1. Mock Database of Destinations (London Focus)
+// Mock Database of Destinations with London Coordinates
 const destinationsData = [
     {
         id: 1,
@@ -7,7 +7,9 @@ const destinationsData = [
         address: "221b Baker St, London",
         rating: 4.6,
         reviews: 3420,
-        image: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=400&q=80"
+        image: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=400&q=80",
+        lat: 51.5237,
+        lng: -0.1585
     },
     {
         id: 2,
@@ -16,7 +18,9 @@ const destinationsData = [
         address: "150 Piccadilly, London",
         rating: 4.8,
         reviews: 1250,
-        image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=400&q=80"
+        image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=400&q=80",
+        lat: 51.5073,
+        lng: -0.1416
     },
     {
         id: 3,
@@ -25,17 +29,46 @@ const destinationsData = [
         address: "12 Upper St Martin's Ln, London",
         rating: 4.7,
         reviews: 4800,
-        image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=400&q=80"
+        image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=400&q=80",
+        lat: 51.5132,
+        lng: -0.1245
     }
 ];
 
-// 2. Function to Render Destination Cards Dynamically
+// Global Map Variables
+let map;
+let markers = [];
+
+// Google Maps Initialization Function (Called by Google Maps Script API callback)
+window.initMap = function() {
+    // Central London coordinates (Baker Street / Marylebone area focus)
+    const centralLondon = { lat: 51.5150, lng: -0.1450 };
+
+    // Create the map inside the #map div
+    map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 13,
+        center: centralLondon,
+        styles: [
+            {
+                featureType: "poi",
+                elementType: "labels",
+                stylers: [{ visibility: "off" }]
+            }
+        ]
+    });
+
+    // Render initial markers on map load
+    updateMapMarkers(destinationsData);
+};
+
+// Function to Render Destination Cards Dynamically
 function renderDestinations(items) {
     const container = document.getElementById("results-container");
     container.innerHTML = "";
 
     if (items.length === 0) {
         container.innerHTML = `<p class="text-muted text-center py-4">No destinations found matching your criteria.</p>`;
+        updateMapMarkers([]); // Clear map markers too
         return;
     }
 
@@ -62,48 +95,77 @@ function renderDestinations(items) {
         `;
         container.innerHTML += cardHTML;
     });
+
+    // Update map markers to match currently displayed items
+    updateMapMarkers(items);
 }
 
-// 3. Unified Filtering Function (Combines Text Search & Category)
+// Function to Update Google Map Markers
+function updateMapMarkers(items) {
+    // Safety check: ensure Google Maps library is loaded before running
+    if (!window.google || !map) return;
+
+    // Clear existing markers from the map
+    markers.forEach(marker => marker.setMap(null));
+    markers = [];
+
+    // Create new markers for each filtered destination
+    items.forEach(dest => {
+        const marker = new google.maps.Marker({
+            position: { lat: dest.lat, lng: dest.lng },
+            map: map,
+            title: dest.name,
+            animation: google.maps.Animation.DROP
+        });
+
+        // Optional: Add info window on click
+        const infoWindow = new google.maps.InfoWindow({
+            content: `<div style="padding: 5px;"><strong>${dest.name}</strong><br><small>${dest.address}</small></div>`
+        });
+
+        marker.addListener("click", () => {
+            infoWindow.open(map, marker);
+        });
+
+        markers.push(marker);
+    });
+}
+
+//Unified Filtering Function (Combines Search & Category)
 function filterAndSearch() {
     const query = document.getElementById("destination-input").value.toLowerCase().trim();
     const selectedCategory = document.getElementById("category-select").value;
 
     const filteredItems = destinationsData.filter(dest => {
-        // Check if destination name or address matches typed text
         const matchesText = dest.name.toLowerCase().includes(query) || dest.address.toLowerCase().includes(query);
-        
-        // Check if destination matches selected category dropdown
         const matchesCategory = selectedCategory === "all" || dest.category === selectedCategory;
-
-        // Both conditions must be true
         return matchesText && matchesCategory;
     });
 
     renderDestinations(filteredItems);
 }
 
-// 4. Run when browser finishes loading the page
+// Run when browser finishes loading the page
 document.addEventListener("DOMContentLoaded", () => {
     console.log("DestinationFinder JavaScript loaded successfully!");
     
-    // Initial render of all destinations
+    // Initial render
     renderDestinations(destinationsData);
 
-    // A. Hero Search Form Submit Event (Prevents default page refresh)
+    // Hero Form Submit Event
     const searchForm = document.getElementById("search-form");
     searchForm.addEventListener("submit", (e) => {
         e.preventDefault();
         filterAndSearch();
     });
 
-    // B. Category Dropdown Change Event
+    // Category Dropdown Change Event
     const categorySelect = document.getElementById("category-select");
     categorySelect.addEventListener("change", () => {
         filterAndSearch();
     });
 
-    // C. Left Column Filter Buttons Click Event
+    // Left Column Filter Buttons Click Event
     const filterButtons = document.querySelectorAll(".filter-btn");
     filterButtons.forEach(button => {
         button.addEventListener("click", (e) => {
@@ -111,8 +173,6 @@ document.addEventListener("DOMContentLoaded", () => {
             e.target.classList.add("active");
 
             const category = e.target.getAttribute("data-category");
-            
-            // Sync dropdown value with the clicked button for harmony
             document.getElementById("category-select").value = category;
             
             filterAndSearch();

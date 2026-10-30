@@ -148,12 +148,18 @@ function openDestinationModal(id) {
     modalElement.show();
 }
 
-// Function to Update Google Map Markers
+// Function to Update Google Map Markers and Auto-Fit Bounds
 function updateMapMarkers(items) {
     if (!window.google || !map) return;
 
+    // Clear existing markers from the map
     markers.forEach(marker => marker.setMap(null));
     markers = [];
+
+    if (items.length === 0) return;
+
+    // Create a bounds object to group all visible markers
+    const bounds = new google.maps.LatLngBounds();
 
     items.forEach(dest => {
         const marker = new google.maps.Marker({
@@ -172,9 +178,19 @@ function updateMapMarkers(items) {
         });
 
         markers.push(marker);
+        
+        // Extend map bounds to include this destination's coordinates
+        bounds.extend({ lat: dest.lat, lng: dest.lng });
     });
-}
 
+    // Automatically pan and zoom the map to fit all current search results
+    map.fitBounds(bounds);
+
+    // If only one item is found, don't zoom in too aggressively
+    if (items.length === 1) {
+        map.setZoom(14);
+    }
+}
 // Unified Filtering Function
 function filterAndSearch() {
     const query = document.getElementById("destination-input").value.toLowerCase().trim();

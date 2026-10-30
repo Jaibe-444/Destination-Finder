@@ -1,4 +1,4 @@
-// Mock Database of Destinations with Details & Coordinates
+// Mock Database of Destinations (London & Paris Focus)
 const destinationsData = [
     {
         id: 1,
@@ -8,7 +8,7 @@ const destinationsData = [
         rating: 4.6,
         reviews: 3420,
         image: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=400&q=80",
-        description: "Step back into Victorian London at the legendary residence of fictional detective Sherlock Holmes. Explore authentically recreated rooms filled with period artifacts.",
+        description: "Step back into Victorian London at the legendary residence of fictional detective Sherlock Holmes.",
         price: "£25 / person",
         lat: 51.5237,
         lng: -0.1585
@@ -21,7 +21,7 @@ const destinationsData = [
         rating: 4.8,
         reviews: 1250,
         image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=400&q=80",
-        description: "A world-famous symbol of high society and luxury. Experience legendary British afternoon tea, immaculate neoclassical architecture, and five-star hospitality.",
+        description: "A world-famous symbol of high society and luxury with immaculate neoclassical architecture.",
         price: "£450 / night",
         lat: 51.5073,
         lng: -0.1416
@@ -34,10 +34,36 @@ const destinationsData = [
         rating: 4.7,
         reviews: 4800,
         image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=400&q=80",
-        description: "Pay homage to the old Irani cafés of Bombay. Enjoy legendary house black daal, grilled specialities, and vibrant cocktails in a stunning atmosphere.",
+        description: "Pay homage to the old Irani cafés of Bombay with legendary house black daal.",
         price: "£40 avg. meal",
         lat: 51.5132,
         lng: -0.1245
+    },
+    {
+        id: 4,
+        name: "Eiffel Tower",
+        category: "attractions",
+        address: "Champ de Mars, 75007 Paris, France",
+        rating: 4.7,
+        reviews: 95400,
+        image: "https://images.unsplash.com/photo-1511739001486-6bfe10ce785f?auto=format&fit=crop&w=400&q=80",
+        description: "Iconic wrought-iron lattice tower on the Champ de Mars in Paris, named after engineer Gustave Eiffel.",
+        price: "€30 / person",
+        lat: 48.8584,
+        lng: 2.2945
+    },
+    {
+        id: 5,
+        name: "Hôtel de Crillon",
+        category: "lodging",
+        address: "10 Place de la Concorde, 75008 Paris, France",
+        rating: 4.9,
+        reviews: 820,
+        image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=400&q=80",
+        description: "Historic luxury hotel overlooking the Place de la Concorde offering elite Parisian elegance.",
+        price: "€750 / night",
+        lat: 48.8671,
+        lng: 2.3218
     }
 ];
 

@@ -64,38 +64,58 @@ function renderDestinations(items) {
     });
 }
 
-// 3. Function to Filter Destinations by Category
-function filterDestinations(category) {
-    if (category === "all") {
-        renderDestinations(destinationsData);
-    } else {
-        // .filter() creates a new array containing only items that match the category
-        const filteredItems = destinationsData.filter(dest => dest.category === category);
-        renderDestinations(filteredItems);
-    }
+// 3. Unified Filtering Function (Combines Text Search & Category)
+function filterAndSearch() {
+    const query = document.getElementById("destination-input").value.toLowerCase().trim();
+    const selectedCategory = document.getElementById("category-select").value;
+
+    const filteredItems = destinationsData.filter(dest => {
+        // Check if destination name or address matches typed text
+        const matchesText = dest.name.toLowerCase().includes(query) || dest.address.toLowerCase().includes(query);
+        
+        // Check if destination matches selected category dropdown
+        const matchesCategory = selectedCategory === "all" || dest.category === selectedCategory;
+
+        // Both conditions must be true
+        return matchesText && matchesCategory;
+    });
+
+    renderDestinations(filteredItems);
 }
 
 // 4. Run when browser finishes loading the page
 document.addEventListener("DOMContentLoaded", () => {
     console.log("DestinationFinder JavaScript loaded successfully!");
     
-    // Initial render
+    // Initial render of all destinations
     renderDestinations(destinationsData);
 
-    // Attach click event listeners to all filter buttons
+    // A. Hero Search Form Submit Event (Prevents default page refresh)
+    const searchForm = document.getElementById("search-form");
+    searchForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        filterAndSearch();
+    });
+
+    // B. Category Dropdown Change Event
+    const categorySelect = document.getElementById("category-select");
+    categorySelect.addEventListener("change", () => {
+        filterAndSearch();
+    });
+
+    // C. Left Column Filter Buttons Click Event
     const filterButtons = document.querySelectorAll(".filter-btn");
-    
     filterButtons.forEach(button => {
         button.addEventListener("click", (e) => {
-            // Remove 'active' class from all buttons
             filterButtons.forEach(btn => btn.classList.remove("active"));
-            
-            // Add 'active' class to the clicked button for visual feedback
             e.target.classList.add("active");
 
-            // Extract category name and run filter function
             const category = e.target.getAttribute("data-category");
-            filterDestinations(category);
+            
+            // Sync dropdown value with the clicked button for harmony
+            document.getElementById("category-select").value = category;
+            
+            filterAndSearch();
         });
     });
 });

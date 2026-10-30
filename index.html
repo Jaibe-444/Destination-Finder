@@ -197,8 +197,44 @@
                 <p class="mb-0">&copy; 2026 DestinationFinder. School Project Assignment.</p>
             </div>
         </div>
+
     </footer>
     
+    <!-- Destination Details Modal -->
+    <div class="modal fade" id="destinationModal" tabindex="-1" aria-labelledby="destinationModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content border-0 shadow-lg">
+                <div class="modal-header bg-dark text-white">
+                    <h5 class="modal-title fw-bold" id="destinationModalLabel"><i class="bi bi-compass text-warning me-2"></i>Destination Details</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <div class="row g-4 align-items-center">
+                        <div class="col-md-6">
+                            <img id="modal-img" src="" class="img-fluid rounded-4 shadow-sm object-fit-cover w-100" style="height: 250px;" alt="Destination Image">
+                        </div>
+                        <div class="col-md-6">
+                            <h3 id="modal-title" class="fw-bold fs-4 mb-2"></h3>
+                            <p id="modal-address" class="text-muted small mb-3"><i class="bi bi-geo-alt text-danger me-1"></i><span></span></p>
+                            <div class="mb-3">
+                                <span id="modal-rating" class="badge bg-warning text-dark fs-6"></span>
+                                <span id="modal-reviews" class="text-muted small ms-2"></span>
+                            </div>
+                            <p id="modal-desc" class="text-secondary small mb-3"></p>
+                            <div class="p-3 bg-light rounded-3 mb-3">
+                                <span class="text-muted small d-block">Estimated Package Price</span>
+                                <h4 id="modal-price" class="fw-bold text-success mb-0"></h4>
+                            </div>
+                            <button type="button" class="btn btn-warning w-100 fw-bold py-2 shadow-sm" onclick="alert('Booking confirmed! Thank you for using DestinationFinder.')">
+                                <i class="bi bi-check-circle-fill me-2"></i>Book This Experience
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Google Maps API Script -->
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD5BYYuU2n5RVzFyvMNvRL6ZZneO22xA0Y&callback=initMap"></script>
     <!-- Bootstrap 5 JavaScript Bundle -->

@@ -91,6 +91,13 @@ Encourage user engagement and monetize through affiliate link clicks, travel pac
 
 ---
 
+### My Development Approach
+
+   - I practice the code on w3schools.com platform
+   - Compile the code on Replit.com IDE
+   - And copy the code to my IDE / Visual studio code
+   - This is mainly to avoid too much messy work on my IDE
+    
 ## 📁 Project File Structure
 ```text
 destinationfinder/

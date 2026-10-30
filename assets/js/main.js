@@ -234,4 +234,13 @@ document.addEventListener("DOMContentLoaded", () => {
             filterAndSearch();
         });
     });
+
+    // Featured Package Booking Buttons Click Event
+    const packageButtons = document.querySelectorAll(".book-package-btn");
+    packageButtons.forEach(button => {
+        button.addEventListener("click", (e) => {
+            const packageName = e.target.getAttribute("data-package");
+            alert(`🎉 Success! You have selected the "${packageName}". Our travel specialist will contact you shortly to finalize your booking.`);
+        });
+    });
 });

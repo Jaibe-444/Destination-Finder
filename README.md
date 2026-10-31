@@ -1,6 +1,6 @@
 # DestinationFinder - Project Documentation
 
-## [View the live project here](https://jaibe-444.github.io/Destination-Finder/)
+## <a href="https://jaibe-444.github.io/Destination-Finder/" target="_blank" rel="noopener">View the live project here</a>
 This is an interactive holiday planning and destination discovery web application built as an academic project. It is designed to be responsive and accessible across a range of devices, making it easy to navigate for travelers looking for attractions, accommodations, and dining experiences.
 
 ---
@@ -60,8 +60,8 @@ Frameworks, Libraries & Programs Used
 ## Testing & Quality Assurance
 The application underwent thorough testing across multiple dimensions:
 
-- **Performance & Accessibility Testing:** Audited using **[Google Lighthouse / PageSpeed Insights](https://pagespeed.web.dev/)** to evaluate performance, best practices, SEO, and accessibility metrics.
-- **Code Validation:** Verified semantic correctness using the **[W3C Nu HTML Checker](https://validator.w3.org/)** and checked styling integrity using the **[W3C CSS Validator](https://jigsaw.w3.org/css-validator/)**.
+- **Performance & Accessibility Testing:** Audited using **<a href="https://pagespeed.web.dev/" target="_blank" rel="noopener">Google Lighthouse / PageSpeed Insights</a>** to evaluate performance, best practices, SEO, and accessibility metrics.
+- **Code Validation:** Verified semantic correctness using the **<a href="https://validator.w3.org/ " target="_blank" rel="noopener">W3C Nu HTML Checker</a>** and checked styling integrity using the **<a href="https://jigsaw.w3.org/css-validator/ " target="_blank" rel="noopener">W3C CSS Validator</a>**.
 - **Cross-Browser Compatibility:** Tested and verified layout consistency and interactive features across **Google Chrome, Mozilla Firefox, Microsoft Edge, and Opera**.
 
 ---
@@ -76,11 +76,11 @@ During development, several key technical and validation challenges were success
 
 ## Development Resources & Acknowledgements
 - **Learning & Reference:** 
-    - [W3Schools](https://www.w3schools.com) – Core reference for HTML, CSS, and JavaScript DOM manipulation syntax.
-    - [Replit](https://replit.com) – Utilized for collaborative code prototyping and testing.
-    - [YouTube Tutorial Guide](https://youtu.be/NfvtQ2p5QG4) – Consulted for responsive layout design strategies and UI structuring.
+    - <a href="https://www.w3schools.com/ " target="_blank" rel="noopener">W3Schools</a> – Core reference for HTML, CSS, and JavaScript DOM manipulation syntax.
+    - <a href="https://replit.com/ " target="_blank" rel="noopener">Replit</a> – Utilized for collaborative code prototyping and testing.
+    - <a href="https://youtu.be/NfvtQ2p5QG4" target="_blank" rel="noopener">YouTube Tutorial Guide</a> – Consulted for responsive layout design strategies and UI structuring.
 - **Image Sources:** 
-    - **[Unsplash](https://unsplash.com/)** – Provided all high-resolution photography used for destination cards, hero backgrounds, and modal views under their free-to-use license.
+    - **<a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a> ** – Provided all high-resolution photography used for destination cards, hero backgrounds, and modal views under their free-to-use license.
 
 ---
 
@@ -94,15 +94,14 @@ During development, several key technical and validation challenges were success
 ## 📁 Project File Structure
 
 ```text
-destinationfinder/
-│
-├── index.html              # Core HTML structure & Bootstrap markup
-├── README.md               # Project documentation & user stories
-│
+Destination-Finder/
+├── index.html
+├── README.md
 └── assets/
-    └── css/
-        └── style.css       # Custom CSS styling & overrides
-
+    ├── css/
+    │   └── style.css
+    └── js/
+        └── main.js
 
 ```
 ### Wire Frame

@@ -110,7 +110,7 @@ function renderDestinations(items) {
                     </div>
                     <div class="col-8">
                         <div class="card-body py-2 px-3">
-                            <h5 class="card-title fw-bold fs-6 mb-1">${dest.name}</h5>
+                            <h3 class="card-title fw-bold fs-6 mb-1">${dest.name}</h3>
                             <p class="text-muted small mb-1"><i class="bi bi-geo-alt text-danger me-1"></i>${dest.address}</p>
                             <div class="mb-2">
                                 <span class="badge bg-warning text-dark">★ ${dest.rating}</span>

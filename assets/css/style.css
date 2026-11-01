@@ -1,4 +1,7 @@
 
+/* Custom Styles for DestinationFinder */
+
+/* 1. Global Typography & Colors */
 body {
     font-family: 'Open Sans', sans-serif;
     color: #333333;
@@ -9,10 +12,12 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
     font-family: 'Montserrat', sans-serif;
 }
 
+/* 2. Helper Utility Classes */
 .max-w-700 {
     max-width: 700px;
 }
 
+/* 3. Hero Section Header */
 .hero-section {
     background: linear-gradient(135deg, rgba(15, 23, 42, 0.85), rgba(30, 58, 138, 0.85)),
                 url('https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
@@ -20,11 +25,13 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
     padding-bottom: 4rem;
 }
 
+/* 4. Results List Scroll Area */
 .results-container {
     max-height: 450px;
     overflow-y: auto;
 }
 
+/* Custom scrollbar styling */
 .results-container::-webkit-scrollbar {
     width: 6px;
 }
@@ -33,12 +40,14 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
     border-radius: 4px;
 }
 
+/* 5. Map Placeholder Area */
 .map-placeholder {
     width: 100%;
     min-height: 450px;
     background-color: #e9ecef;
 }
 
+/* 6. Card Hover Animations */
 .card {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }

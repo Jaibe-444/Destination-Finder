@@ -1,3 +1,4 @@
+// Mock Database of Destinations (London & Paris Focus)
 const destinationsData = [
     {
         id: 1,
@@ -66,6 +67,7 @@ const destinationsData = [
     }
 ];
 
+// Global Map Variables
 let map;
 let markers = [];
 

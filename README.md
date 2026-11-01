@@ -65,7 +65,9 @@ The application underwent thorough testing across multiple dimensions:
 - **Cross-Browser Compatibility:** Tested and verified layout consistency and interactive features across **Google Chrome, Mozilla Firefox, Microsoft Edge, and Opera**.
 
 ---
-
+## Bugs
+- ** For some reasons I am yet to find out, the " target= _blank" property seems not to be working on my Readme file **.
+  
 ## Troubleshooting & Errors Fixed
 During development, several key technical and validation challenges were successfully resolved:
 1.  **Google Maps API Integration:** Resolved initial `InvalidKeyMapError` and marker clipping issues by implementing asynchronous callback loading and wrapper `LatLngBounds` bounding-box logic.

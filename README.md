@@ -90,6 +90,7 @@ During development, several key technical and validation challenges were success
    - Compile the code on Replit.com IDE
    - And copy the code to my IDE / Visual studio code
    - This is mainly to avoid too much messy work on my IDE
+   - ** I left the commented out code on main.js. This to make it easier for me to edit **
     
 ## 📁 Project File Structure
 

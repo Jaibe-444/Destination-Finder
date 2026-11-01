@@ -65,7 +65,9 @@ The application underwent thorough testing across multiple dimensions:
 - **Cross-Browser Compatibility:** Tested and verified layout consistency and interactive features across **Google Chrome, Mozilla Firefox, Microsoft Edge, and Opera**.
 
 ---
-
+## Bugs
+- ** For some reasons I am yet to find out, the " target= _blank" property seems not to be working on my Readme file **.
+  
 ## Troubleshooting & Errors Fixed
 During development, several key technical and validation challenges were successfully resolved:
 1.  **Google Maps API Integration:** Resolved initial `InvalidKeyMapError` and marker clipping issues by implementing asynchronous callback loading and wrapper `LatLngBounds` bounding-box logic.
@@ -90,6 +92,7 @@ During development, several key technical and validation challenges were success
    - Compile the code on Replit.com IDE
    - And copy the code to my IDE / Visual studio code
    - This is mainly to avoid too much messy work on my IDE
+   - ** I left the commented out code on main.js. This to make it easier for me to edit **
     
 ## 📁 Project File Structure
 

@@ -203,5 +203,5 @@ function renderDestinations(items) {
 
 ** Mobile Scroll**
 
-![Desktop/Tablet View](assets/images/mockShot-Destination-Finder(2).png)
+![Desktop/Tablet View](assets/images/mockShot-Destination-Finder-1.png)
 

@@ -120,7 +120,7 @@ Destination-Finder/
 ![CSS Validator](assets/images/css-validator.png)
 
 
-AI Tools & Development Assistance
+**AI Tools & Development Assistance**
 For faster coding and to avoid type or logic errors encountered during testing (such as on Python Tutor), I used Google Gemini as a coding assistant and teacher to help build, understand, and refine core JavaScript functions.
 
 Gemini assisted in generating initial code structures for the following functions:

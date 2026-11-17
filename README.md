@@ -156,5 +156,5 @@ In real-world web applications, destination lists aren't stored inside HTML file
 
 Summary for your presentation: Hardcoding HTML is great for static sections that never change (like your navbar, hero banner, and footer), whereas generating cardHTML in JavaScript makes the search results interactive, scalable, and easy to maintain."
 
-![JsGeneratedHTML](assets/images/codescreenshot-1.png)
+![JsGeneratedHTML](Destination-Finder\assets\images\codescreenshot-1.png)
 

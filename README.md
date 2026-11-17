@@ -103,6 +103,8 @@ Destination-Finder/
 └── assets/
     ├── css/
     │   └── style.css
+    ├── images/
+    │   └── favicon.png
     └── js/
         └── main.js
 
@@ -235,3 +237,21 @@ Destination-Finder/
 | London, NW1 6XE           |
 | © 2026 DestinationFinder  |
 +---------------------------+
+
+## AI Tools & Development Assistance
+
+For faster coding and to avoid type or logic errors encountered during testing (such as on Python Tutor), I used **Google Gemini** as a coding assistant and teacher to help build, understand, and refine core JavaScript functions. 
+
+Gemini assisted in generating initial code structures for:
+- `initMap`
+- `renderDestinations`
+- `openDestinationModal`
+- `updateMapMarkers`
+- `filterAndSearch`
+
+All generated functions were subsequently reviewed, customized, and integrated to fit the specific project requirements. Beyond code generation, Gemini was used interactively to gain a deeper, step-by-step understanding of complex logic and syntax.
+
+
+<img width="1408" height="1061" alt="Destination-Finder-assets-js-main-js-at-main-·-Jaibe-444-Destination-Finder" src="https://github.com/user-attachments/assets/8b1eaa30-c482-42a6-9aa0-39dc0164733e" />
+
+

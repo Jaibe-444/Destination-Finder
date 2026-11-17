@@ -200,3 +200,8 @@ function renderDestinations(items) {
 
     updateMapMarkers(items);
 }
+
+** Mobile Scroll**
+
+![Desktop/Tablet View](assets/images/mockShot-Destination-Finder(2).png)
+

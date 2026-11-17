@@ -250,7 +250,5 @@ Gemini assisted in generating initial code structures for:
 - `filterAndSearch`
 
 All generated functions were subsequently reviewed, customized, and integrated to fit the specific project requirements. Beyond code generation, Gemini was used interactively to gain a deeper, step-by-step understanding of complex logic and syntax.
+<img width="1408" height="1061" alt="Destination-Finder-assets-js-main-js-at-main-·-Jaibe-444-Destination-Finder" src="https://github.com/user-attachments/assets/ed8fe461-b73f-4e76-99f4-881ffc632c86" />
 
-<p align="center">
-  <img src="C:\Users\Nnoko-Personal\Documents\Destination Finder\assets\images\Destination-Finder-assets-js-main-js-at-main-·-Jaibe-444-Destination-Finder.png" alt="DestinationFinder Screenshot" width="600">
-</p>

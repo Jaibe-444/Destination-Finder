@@ -98,7 +98,7 @@ During development, several key technical and validation challenges were success
 ## 📁 Project File Structure
 
 ```text
-```
+
 Destination-Finder/
 ├── index.html
 ├── README.md
@@ -110,6 +110,7 @@ Destination-Finder/
     └── js/
         └── main.js
 
+```
 ## Project Screenshots & Validation
 
 ### 1. W3C Nu HTML Checker Results
@@ -122,21 +123,22 @@ Destination-Finder/
 AI Tools & Development Assistance
 For faster coding and to avoid type or logic errors encountered during testing (such as on Python Tutor), I used Google Gemini as a coding assistant and teacher to help build, understand, and refine core JavaScript functions.
 
-Gemini assisted in generating initial code structures for:
+Gemini assisted in generating initial code structures for the following functions:
 
-initMap
+func initMap
 
-renderDestinations
+func renderDestinations
 
-openDestinationModal
+func openDestinationModal
 
-updateMapMarkers
+func updateMapMarkers
 
-filterAndSearch
+func filterAndSearch
 
 All generated functions were subsequently reviewed, customized, and integrated to fit the specific project requirements. Beyond code generation, Gemini was used interactively to gain a deeper, step-by-step understanding of complex logic and syntax.
 
-## An example of how I use Google Gemini - I tried writing the "cardHTML" element on the HTML file but got several errors, then Gemini suggested generating it inside the main.js file for the following reasons..
+## An example of how I use Google Gemini - I tried writing the "cardHTML" element syntax on the HTML file but got several errors, then Gemini suggested generating it inside the main.js file for the following reasons..
+# According to Google Gemini..
 "
 Building the cardHTML template inside JavaScript instead of hardcoding every card in index.html is a foundational web development pattern called Dynamic DOM Rendering.
 
@@ -158,7 +160,7 @@ Summary for your presentation: Hardcoding HTML is great for static sections that
 
 ---
 ## Sample Code
-## Function to Render Destination Cards Dynamically with Modal Trigger
+## Function to Render Destination Cards Dynamically with Modal Trigger.
 function renderDestinations(items) {
     const container = document.getElementById("results-container");
     container.innerHTML = "";

@@ -98,6 +98,7 @@ During development, several key technical and validation challenges were success
 ## 📁 Project File Structure
 
 ```text
+```
 Destination-Finder/
 ├── index.html
 ├── README.md

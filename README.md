@@ -3,7 +3,10 @@
 ## [View the live project here](https://jaibe-444.github.io/Destination-Finder/)
 This is an interactive holiday planning and destination discovery web application built as an academic project. It is designed to be responsive and accessible across a range of devices, making it easy to navigate for travelers looking for attractions, accommodations, and dining experiences.
 
+
 ---
+
+![Desktop/Tablet View](assets/images/mockShot-Destination-Finder.png)
 
 ## User Experience (UX)
 - User stories

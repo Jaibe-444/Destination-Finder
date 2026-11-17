@@ -251,7 +251,19 @@ Gemini assisted in generating initial code structures for:
 
 All generated functions were subsequently reviewed, customized, and integrated to fit the specific project requirements. Beyond code generation, Gemini was used interactively to gain a deeper, step-by-step understanding of complex logic and syntax.
 
+## Project Screenshots & Validation
 
-<img width="1408" height="1061" alt="Destination-Finder-assets-js-main-js-at-main-·-Jaibe-444-Destination-Finder" src="https://github.com/user-attachments/assets/8b1eaa30-c482-42a6-9aa0-39dc0164733e" />
+### 1. Application Interface (`CodeScreenShot-1`)
+Here is a preview of the live application running in the browser, showing the hero search form, dynamic destination cards, and the interactive Google Map:
+![CodeScreenShot-1](assets/images/CodeScreenShot-1.png)
+
+### 2. W3C Nu HTML Checker Results (`Screenshot-Nu Html Checker`)
+The project's HTML structure was rigorously tested and validated using the W3C Nu HTML Checker to ensure full accessibility and compliance with semantic standards (0 errors):
+![Screenshot-Nu Html Checker](assets/images/Screenshot-NuHtmlChecker.png)
+
+### 3. W3C CSS Validator Results (`Screenshot W3C CSS Validator results for TextArea (CSS level 3 SVG)`)
+The custom stylesheet was checked against the W3C CSS Validator to verify styling integrity and ensure compatibility across modern browsers:
+![W3C CSS Validator Results](assets/images/Screenshot-W3CCSSValidator.png)
+
 
 

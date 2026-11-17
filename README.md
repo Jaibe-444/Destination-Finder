@@ -157,5 +157,41 @@ In real-world web applications, destination lists aren't stored inside HTML file
 Summary for your presentation: Hardcoding HTML is great for static sections that never change (like your navbar, hero banner, and footer), whereas generating cardHTML in JavaScript makes the search results interactive, scalable, and easy to maintain."
 
 ---
-![JsGeneratedHTML](assets/images/codescreenshot-1.png)
+## Sample Code
+## Function to Render Destination Cards Dynamically with Modal Trigger
+function renderDestinations(items) {
+    const container = document.getElementById("results-container");
+    container.innerHTML = "";
 
+    if (items.length === 0) {
+        container.innerHTML = `<p class="text-muted text-center py-4">No destinations found matching your criteria.</p>`;
+        updateMapMarkers([]);
+        return;
+    }
+
+    items.forEach(dest => {
+        const cardHTML = `
+            <div class="card mb-3 shadow-sm border-0">
+                <div class="row g-0">
+                    <div class="col-4">
+                        <img src="${dest.image}" class="img-fluid rounded-start h-100 object-fit-cover" alt="${dest.name}">
+                    </div>
+                    <div class="col-8">
+                        <div class="card-body py-2 px-3">
+                            <h3 class="card-title fw-bold fs-6 mb-1">${dest.name}</h3>
+                            <p class="text-muted small mb-1"><i class="bi bi-geo-alt text-danger me-1"></i>${dest.address}</p>
+                            <div class="mb-2">
+                                <span class="badge bg-warning text-dark">★ ${dest.rating}</span>
+                                <span class="text-muted small ms-1">(${dest.reviews} reviews)</span>
+                            </div>
+                            <button class="btn btn-sm btn-outline-primary py-0" onclick="openDestinationModal(${dest.id})">View Deal</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+        container.innerHTML += cardHTML;
+    });
+
+    updateMapMarkers(items);
+}

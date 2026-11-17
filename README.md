@@ -108,3 +108,14 @@ Destination-Finder/
     │   └── favicon.png
     └── js/
         └── main.js
+
+## Project Screenshots & Validation
+
+### 1. Application Interface
+![Application Interface](assets/images/codescreenshot-1.png)
+
+### 2. W3C Nu HTML Checker Results
+![Nu HTML Checker](assets/images/nu-html-validator.png)
+
+### 3. W3C CSS Validator Results
+![CSS Validator](assets/images/css-validator.png)

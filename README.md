@@ -1,6 +1,6 @@
 # DestinationFinder - Project Documentation
 
-## <a href="https://jaibe-444.github.io/Destination-Finder/" target="_blank" rel="noopener">View the live project here</a>
+## [View the live project here](https://jaibe-444.github.io/Destination-Finder/)
 This is an interactive holiday planning and destination discovery web application built as an academic project. It is designed to be responsive and accessible across a range of devices, making it easy to navigate for travelers looking for attractions, accommodations, and dining experiences.
 
 ---
@@ -60,40 +60,41 @@ Frameworks, Libraries & Programs Used
 ## Testing & Quality Assurance
 The application underwent thorough testing across multiple dimensions:
 
-- **Performance & Accessibility Testing:** Audited using **<a href="https://pagespeed.web.dev/" target="_blank" rel="noopener">Google Lighthouse / PageSpeed Insights</a>** to evaluate performance, best practices, SEO, and accessibility metrics.
-- **Code Validation:** Verified semantic correctness using the **<a href="https://validator.w3.org/ " target="_blank" rel="noopener">W3C Nu HTML Checker</a>** and checked styling integrity using the **<a href="https://jigsaw.w3.org/css-validator/ " target="_blank" rel="noopener">W3C CSS Validator</a>**.
+- **Performance & Accessibility Testing:** Audited using [Google Lighthouse / PageSpeed Insights](https://pagespeed.web.dev/) to evaluate performance, best practices, SEO, and accessibility metrics.
+- **Code Validation:** Verified semantic correctness using the [W3C Nu HTML Checker](https://validator.w3.org/) and checked styling integrity using the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/).
 - **Cross-Browser Compatibility:** Tested and verified layout consistency and interactive features across **Google Chrome, Mozilla Firefox, Microsoft Edge, and Opera**.
 
 ---
 ## Bugs
-- ** For some reasons I am yet to find out, the " target= _blank" property seems not to be working on my Readme file **.
+- **Note on External Links:** GitHub markdown automatically opens standard markdown links `[Text](URL)` in new tabs depending on user settings, which is why raw `target="_blank"` tags can occasionally be stripped out by the parser.
   
 ## Troubleshooting & Errors Fixed
 During development, several key technical and validation challenges were successfully resolved:
-1.  **Google Maps API Integration:** Resolved initial `InvalidKeyMapError` and marker clipping issues by implementing asynchronous callback loading and wrapper `LatLngBounds` bounding-box logic.
-2.  **W3C Heading Hierarchy Errors:** Corrected semantic heading level jumps (e.g., ensuring `h2` elements are correctly followed by `h3` rather than skipping straight to `h5`/`h6`).
-3.  **HTML Structure Balance:** Cleaned up unclosed tags and container nesting within the main grid layout to achieve 100% W3C validation compliance.
+1. **Google Maps API Integration:** Resolved initial `InvalidKeyMapError` and marker clipping issues by implementing asynchronous callback loading and wrapper `LatLngBounds` bounding-box logic.
+2. **W3C Heading Hierarchy Errors:** Corrected semantic heading level jumps (e.g., ensuring `h2` elements are correctly followed by `h3` rather than skipping straight to `h5`/`h6`).
+3. **HTML Structure Balance:** Cleaned up unclosed tags and container nesting within the main grid layout to achieve 100% W3C validation compliance.
 
 ---
 
 ## Development Resources & Acknowledgements
 - **Learning & Reference:** 
-    - <a href="https://www.w3schools.com/ " target="_blank" rel="noopener">W3Schools</a> – Core reference for HTML, CSS, and JavaScript DOM manipulation syntax.
-    - <a href="https://replit.com/ " target="_blank" rel="noopener">Replit</a> – Utilized for collaborative code prototyping and testing.
-    - <a href="https://youtu.be/NfvtQ2p5QG4" target="_blank" rel="noopener">YouTube Tutorial Guide</a> – Consulted for responsive layout design strategies and UI structuring.
+    - [W3Schools](https://www.w3schools.com/) – Core reference for HTML, CSS, and JavaScript DOM manipulation syntax.
+    - [Replit](https://replit.com/) – Utilized for collaborative code prototyping and testing.
+    - [YouTube Tutorial Guide](https://youtu.be/NfvtQ2p5QG4) – Consulted for responsive layout design strategies and UI structuring.
 - **Image Sources:** 
-    - **<a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a> ** – Provided all high-resolution photography used for destination cards, hero backgrounds, and modal views under their free-to-use license.
+    - **[Unsplash](https://unsplash.com)** – Provided all high-resolution photography used for destination cards, hero backgrounds, and modal views under their free-to-use license.
 
 ---
 
 ### My Development Approach
+- I practice the code on w3schools.com platform
+- Compile the code on Replit.com IDE
+- And copy the code to my IDE / Visual studio code
+- This is mainly to avoid too much messy work on my IDE
+- **I left the commented out code on main.js. This to make it easier for me to edit**
 
-   - I practice the code on w3schools.com platform
-   - Compile the code on Replit.com IDE
-   - And copy the code to my IDE / Visual studio code
-   - This is mainly to avoid too much messy work on my IDE
-   - ** I left the commented out code on main.js. This to make it easier for me to edit **
-    
+---
+      
 ## 📁 Project File Structure
 
 ```text
@@ -107,163 +108,3 @@ Destination-Finder/
     │   └── favicon.png
     └── js/
         └── main.js
-
-```
-### Wire Frame
-```
-** 1. Desktop Wireframe Layout (≥ 992px) **
-
-+---------------------------------------------------------------------------------------------+
-| [Icon] DestinationFinder          [Home]   [Explore]   [Packages]   [Contact]               |  <-- Sticky Navbar
-+---------------------------------------------------------------------------------------------+
-|                                                                                             |
-|                     Find Your Next Holiday Destination                                      |
-|            Discover top attractions, accommodations, and dining across the globe.           |
-|                                                                                             |
-|      +-------------------------------------------------------------------------------+      |
-|      | [📍] Enter a city (e.g. London, Paris)  | [All Categories v]  | [  Search  ]    |      | <-- Hero Search Bar
-|      +-------------------------------------------------------------------------------+      |
-|                                                                                             |
-+---------------------------------------------------------------------------------------------+
-|                                                                                             |
-|  LEFT COLUMN: Destinations (5 cols)           | RIGHT COLUMN: Destination Map (7 cols)      |
-|  -------------------------------------------  | -----------------------------------------   |
-|  [Destinations]           [Preview Mode]      |                                           |
-|  [All]  [Sights]  [Stays]  [Food]             |   +-----------------------------------+   |
-|                                               |   |                                   |   |
-|  +-----------------------------------------+  |   |            Google Maps            |   |
-|  | [Img] | The Sherlock Holmes Museum      |  |   |             Placeholder           |   |
-|  |       | ★ 4.6 (3,420 rev) • 221b Baker St |  |   |        (Ready for API in Step 2)  |   |
-|  |       | [View Deal]                     |  |   |                                   |   |
-|  +-----------------------------------------+  |   |                                   |   |
-|  (Scrollable container for future results)    |   +-----------------------------------+   |
-|                                               |                                           |
-+---------------------------------------------------------------------------------------------+
-|                                                                                             |
-|  Featured Holiday Packages                                                                  |
-|  Curated deals from our travel partners                                                     |
-|                                                                                             |
-|  +---------------------------+  +---------------------------+  +-------------------------+  |
-|  | [Sponsored]               |  | [Featured]                |  | [Popular]               |  |
-|  | London City Weekend       |  | Paris Romantic Getaway    |  | Tokyo City Lights       |  |
-|  | 3 Nights stay + pass      |  | 4 Nights + cruise         |  | 7 Nights + rail pass    |  |
-|  | From £299 / person        |  | From £450 / person        |  | From £899 / person      |  |
-|  | [ Book Package ]          |  | [ Book Package ]          |  | [ Book Package ]        |  |
-|  +---------------------------+  +---------------------------+  +-------------------------+  |
-|                                                                                             |
-+---------------------------------------------------------------------------------------------+
-|  DestinationFinder                                 Head Office Address:                     |
-|  An interactive holiday planning platform          124 Baker Street, Marylebone             |
-|  built with Bootstrap & Google Maps API.           London, NW1 6XE, United Kingdom          |
-|---------------------------------------------------------------------------------------------|
-|  © 2026 DestinationFinder. School Project Assignment.                                     |
-+---------------------------------------------------------------------------------------------+
-
-
-** 2. Tablet Wireframe Layout (768px – 991px) **
-
-+-------------------------------------------------------+
-| [Icon] DestinationFinder                       [≡]    |
-+-------------------------------------------------------+
-| Find Your Next Holiday Destination                    |
-| [ Enter city...            ] [ All Cat ] [ Search ]   |
-+-------------------------------------------------------+
-| Destinations (Scrollable List)                        |
-| +---------------------------------------------------+ |
-| | [Img] The Sherlock Holmes Museum                  | |
-| |       ★ 4.6 • 221b Baker St | [View Deal]         | |
-| +---------------------------------------------------+ |
-+-------------------------------------------------------+
-| Destination Map Container                             |
-| +---------------------------------------------------+ |
-| |                                                   | |
-| |              Interactive Map Placeholder          | |
-| |                                                   | |
-| +---------------------------------------------------+ |
-+-------------------------------------------------------+
-| Featured Holiday Packages (2 columns stacked)         |
-| +-------------------------+ +-------------------------+ |
-| | London City Weekend     | | Paris Getaway           | |
-| | From £299 / person      | | From £450 / person      | |
-| +-------------------------+ +-------------------------+ |
-+-------------------------------------------------------+
-| Footer: 124 Baker Street, London, NW1 6XE             |
-+-------------------------------------------------------+
-
-
-** 3. Mobile Wireframe Layout (< 768px) **
-
-+---------------------------+
-| [Icon] DestinationFinder  |
-+---------------------------+
-| Find Your Next Holiday    |
-| Destination               |
-|                           |
-| [ Enter city...         ] |
-| [ All Categories v      ] |
-| [ Search Button         ] |
-+---------------------------+
-| Destinations              |
-| [All][Sights][Stays][Food]|
-|                           |
-| +-----------------------+ |
-| | [Img] Sherlock Holmes | |
-| |       Museum          | |
-| |       ★ 4.6           | |
-| |       [View Deal]     | |
-| +-----------------------+ |
-+---------------------------+
-| Destination Map           |
-| +-----------------------+ |
-| |                       | |
-| |   Map Container       | |
-| |                       | |
-| +-----------------------+ |
-+---------------------------+
-| Featured Packages         |
-| +-----------------------+ |
-| | London City Weekend   | |
-| | From £299 / person    | |
-| | [ Book Package ]      | |
-| +-----------------------+ |
-| +-----------------------+ |
-| | Paris Getaway         | |
-| | From £450 / person    | |
-| | [ Book Package ]      | |
-| +-----------------------+ |
-+---------------------------+
-| Head Office:              |
-| 124 Baker Street          |
-| London, NW1 6XE           |
-| © 2026 DestinationFinder  |
-+---------------------------+
-
-## AI Tools & Development Assistance
-
-For faster coding and to avoid type or logic errors encountered during testing (such as on Python Tutor), I used **Google Gemini** as a coding assistant and teacher to help build, understand, and refine core JavaScript functions. 
-
-Gemini assisted in generating initial code structures for:
-- `initMap`
-- `renderDestinations`
-- `openDestinationModal`
-- `updateMapMarkers`
-- `filterAndSearch`
-
-All generated functions were subsequently reviewed, customized, and integrated to fit the specific project requirements. Beyond code generation, Gemini was used interactively to gain a deeper, step-by-step understanding of complex logic and syntax.
-
-## Project Screenshots & Validation
-
-### 1. Application Interface (`CodeScreenShot-1`)
-Here is a preview of the live application running in the browser, showing the hero search form, dynamic destination cards, and the interactive Google Map:
-![CodeScreenShot-1](assets/images/CodeScreenShot-1.png)
-
-### 2. W3C Nu HTML Checker Results (`Screenshot-Nu Html Checker`)
-The project's HTML structure was rigorously tested and validated using the W3C Nu HTML Checker to ensure full accessibility and compliance with semantic standards (0 errors):
-![Screenshot-Nu Html Checker](assets/images/Screenshot-NuHtmlChecker.png)
-
-### 3. W3C CSS Validator Results (`Screenshot W3C CSS Validator results for TextArea (CSS level 3 SVG)`)
-The custom stylesheet was checked against the W3C CSS Validator to verify styling integrity and ensure compatibility across modern browsers:
-![W3C CSS Validator Results](assets/images/Screenshot-W3CCSSValidator.png)
-
-
-

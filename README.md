@@ -91,7 +91,7 @@ During development, several key technical and validation challenges were success
 - Compile the code on Replit.com IDE
 - And copy the code to my IDE / Visual studio code
 - This is mainly to avoid too much messy work on my IDE
-- **I left the commented out code on main.js. This to make it easier for me to edit**
+- **I left the commented out code on main.js. This is to make it easier for me to edit**
 
 ---
       
@@ -135,9 +135,9 @@ func updateMapMarkers
 
 func filterAndSearch
 
-All generated functions were subsequently reviewed, customized, and integrated to fit the specific project requirements. Beyond code generation, Gemini was used interactively to gain a deeper, step-by-step understanding of complex logic and syntax.
+**All generated functions** were subsequently reviewed, customized, and integrated to fit the specific project requirements. Beyond code generation, Gemini was used interactively to gain a deeper, step-by-step understanding of complex logic and syntax.
 
-## An example of how I use Google Gemini - I tried writing the "cardHTML" element syntax on the HTML file but got several errors, then Gemini suggested generating it inside the main.js file for the following reasons..
+** An example of how I use Google Gemini - I tried writing the "cardHTML" element syntax on the HTML file but got several errors, then Gemini suggested generating it inside the main.js file for the following reasons..**
 # According to Google Gemini..
 "
 Building the cardHTML template inside JavaScript instead of hardcoding every card in index.html is a foundational web development pattern called Dynamic DOM Rendering.
